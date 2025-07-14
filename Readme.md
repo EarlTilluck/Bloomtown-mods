@@ -1,6 +1,6 @@
-# Bloomtown modding
+# My Bloomtown Mods
 
-# Get BepInEx
+## Get BepInEx for these mods
 
 use the following version of BepInEx, which is ready for to use for bloomtown
 
@@ -15,7 +15,11 @@ use the following version of configuration manager
 
 F1 key is used by both configuration manager and Memoria mod, refer to Memoria mod page to learn how to change key settings.
 
-# How to create mods for Unity games (with BepInEx and Harmony)
+## Download releases from nexus
+
+https://www.nexusmods.com/games/bloomtownadifferentstory
+
+## How to create mods for Unity games (with BepInEx and Harmony)
 
 1. Use Visual Studio
 
