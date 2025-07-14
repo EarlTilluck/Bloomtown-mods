@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bloomtown_cheats", "bloomtown_cheats.csproj", "{A6CF2A7F-4147-4F2A-ABEB-2567A4CA65EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6CF2A7F-4147-4F2A-ABEB-2567A4CA65EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CF2A7F-4147-4F2A-ABEB-2567A4CA65EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CF2A7F-4147-4F2A-ABEB-2567A4CA65EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CF2A7F-4147-4F2A-ABEB-2567A4CA65EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADCE61A7-C802-4A87-9453-537A5FEF7450}
+	EndGlobalSection
+EndGlobal
