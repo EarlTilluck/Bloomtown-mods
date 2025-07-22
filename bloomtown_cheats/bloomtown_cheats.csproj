@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PatchCrafting.cs" />
+    <Compile Include="PatchGarden.cs" />
     <Compile Include="PatchStackable.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

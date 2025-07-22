@@ -27,6 +27,14 @@ namespace bloomtown_cheats
         public static ConfigEntry<bool> EnableMaterialStay;
         public static ConfigEntry<bool> EnableFishStay;
         public static ConfigEntry<bool> EnableLockpickStay;
+        public static ConfigEntry<bool> EnableWaterCheat;
+        public static ConfigEntry<bool> EnableGrowTimeCheat;
+        public static ConfigEntry<int> GrowTimeCheatValue;
+        public static ConfigEntry<bool> EnableCraftTimeCheat;
+        public static ConfigEntry<int> CraftTimeValue;
+
+
+        public static ManualLogSource Log = BepInEx.Logging.Logger.CreateLogSource("Bloomtown Cheats");
 
         void Awake()
         {
@@ -54,17 +62,55 @@ namespace bloomtown_cheats
             );
 
             EnableLockpickStay = Config.Bind(
-               "General",              // Config section
+               "Lockpicks",              // Config section
                "Infinte Lockpicks use.",         // Config key
                true,                     // Default value
                "Lockpick amount does not decrease when used."       // Description
            );
 
+
+            EnableWaterCheat = Config.Bind(
+               "Garden",              // Config section
+               "Plants always watered.",         // Config key
+               true,                     // Default value
+               "Never need to water plants."       // Description
+           );
+
+            EnableGrowTimeCheat = Config.Bind(
+               "Garden",              // Config section
+               "Enable grow time cheat.",         // Config key
+               true,                     // Default value
+               "You can set how many minutes for a plant to grow."       // Description
+           );
+
+            GrowTimeCheatValue = Config.Bind(
+               "Garden",              // Config section
+               "Minutes for plants to grow.",         // Config key
+               1,                     // Default value
+               "How many minutes for a plant to grow."       // Description
+           );
+
+            EnableCraftTimeCheat = Config.Bind(
+               "Crafting and Cooking",              // Config section
+               "Enable craft and cook time cheat.",         // Config key
+               true,                     // Default value
+               "You can set how many minutes it takes to cook or craft any recipe."       // Description
+           );
+
+            CraftTimeValue = Config.Bind(
+               "Crafting and Cooking",              // Config section
+               "Minutes to cook or craft anything.",         // Config key
+               10,                     // Default value
+               "How many minutes for any craft or cooking job to finish."       // Description
+           );
+
             // on init, run patch all to patch our code into the game 
             harmony.PatchAll(typeof(Plugin));
             harmony.PatchAll(typeof(PatchStackable));
+            harmony.PatchAll(typeof(PatchGarden));
+            harmony.PatchAll(typeof(PatchCrafting));
 
-            Logger.LogInfo("Bloomtown Cheats Loaded.");
+            Log.LogInfo("Bloomtown Cheats Loaded.");
 
 
         }

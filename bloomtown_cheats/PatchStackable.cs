@@ -116,7 +116,7 @@ namespace bloomtown_cheats
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Stackable), nameof(Stackable.Take))]
-        public static void Stackable_Take(Stackable __instance, ref int amount)
+        public static void Pre_Stackable_Take(ref Stackable __instance, ref int amount)
         {
 
             ManualLogSource logger = BepInEx.Logging.Logger.CreateLogSource("Logger");
@@ -151,32 +151,6 @@ namespace bloomtown_cheats
                     __instance.Add(amount);
                 }
             }
-
-
-
-            //foo
-
-            //GameSettings gameSettings = StatsSync.instance.gameSettings;
-            ////List<Consumable> allObjects = Extensions.EditorMethodsWrapper.LoadAllFromMovedResources<Consumable>(Consumable.PathToResources).ToList<Consumable>();
-            //List<CraftMaterial> list = gameSettings.craftMaterials;
-
-            //logger.LogError("item count is: " + list.Count);
-            //foreach (CraftMaterial consumable in list)
-            //{
-            //    string u = consumable.uid;
-            //    logger.LogInfo("item : " + u);
-            //}
-
-            //var lockpick = gameSettings.lockpick;
-            //logger.LogInfo(lockpick.uid);
-
-            //List<Fish> fishes = gameSettings.fishes;
-            //foreach (Fish fish in fishes)
-            //{
-            //    logger.LogInfo(fish.uid);
-            //}
-
-            // foo
 
 
         }
